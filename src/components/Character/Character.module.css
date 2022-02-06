@@ -1,4 +1,5 @@
 .character {
-  /* Fill the available container height */
+  /* Fill the available container */
   height: 100%;
+  width: 100%;
 }

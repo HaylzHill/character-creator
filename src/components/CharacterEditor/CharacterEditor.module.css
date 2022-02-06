@@ -1,6 +1,5 @@
 .characterEditor {
-  padding-top: 128px;
-  padding-bottom: 64px;
+  padding: 64px 0;
 }
 
 .maxWidthWrapper {
@@ -8,8 +7,7 @@
 }
 
 .header {
-  padding-bottom: 64px;
-  width: 65%;
+  padding-bottom: 32px;
 }
 
 .title {
@@ -26,16 +24,20 @@
 }
 
 .characterWrapper {
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  bottom: 5%;
-  margin-left: 100px;
+  position: relative;
   min-height: 500px;
 }
 
 .controlColumn {
-  width: 50%;
+  display: flex;
+  overflow: auto;
+  column-gap: 15px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 185px;
+  padding: 10px 32px;
+  z-index: 1;
 }
 
 .backgroundPane {
@@ -45,4 +47,30 @@
   bottom: 0;
   left: 0;
   background-color: hsl(195deg, 20%, 86%);
+}
+
+@media screen and (min-width: 768px) {
+  .characterEditor {
+    padding-top: 128px;
+  }
+
+  .header {
+    padding-bottom: 64px;
+    width: 65%;
+  }
+
+  .characterWrapper {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    bottom: 5%;
+    margin-left: 50px;
+  }
+
+  .controlColumn {
+    width: 50%;
+    display: block;
+    position: static;
+    padding: 0;
+  }
 }
